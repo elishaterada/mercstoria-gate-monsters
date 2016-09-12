@@ -27,56 +27,12 @@ angular
   .run(run)
 
 //  Monsters Component
-function MonstersCtrl ($mdDialog) {
+function MonstersCtrl ($http, $log, $mdDialog) {
   var ctrl = this
 
   ctrl.type = ''
 
-  ctrl.monsters = {
-    fire: [
-
-    ],
-    water: [
-      {
-        name: 'メリギール',
-        reach: 90,
-        range: 140,
-        combo: 3,
-        chosen: false
-      },
-      {
-        name: 'ヴィンデール',
-        reach: 115,
-        range: 150,
-        combo: 0,
-        chosen: false
-      },
-      {
-        name: 'セネガルガ',
-        reach: 70,
-        range: 140,
-        combo: 4,
-        chosen: false
-      },
-      {
-        name: 'アンキロクロス',
-        reach: 40,
-        range: 80,
-        combo: 0,
-        chosen: false
-      }
-
-    ],
-    wind: [
-
-    ],
-    light: [
-
-    ],
-    dark: [
-
-    ]
-  }
+  ctrl.monsters = {}
 
   ctrl.chosenMonsters = []
 
@@ -95,6 +51,23 @@ function MonstersCtrl ($mdDialog) {
     }, function() {
     })
   }
+
+  function getMonsters () {
+    $http({
+      method: 'GET',
+      url: '/src/data/monsters.json'
+    }).then(function successCallback(response) {
+      ctrl.monsters = response.data
+    }, function errorCallback(response) {
+      $log.debug(response)
+    })
+  }
+
+  function init() {
+    getMonsters()
+  }
+
+  init()
 }
 
 angular
