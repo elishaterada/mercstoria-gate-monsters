@@ -1,7 +1,7 @@
 <!doctype html>
 <html ng-app="app" ng-controller="AppCtrl" lang="en">
 <head>
-  <title>Page Title</title>
+  <title>メルスト ゲート モンスターピッカー</title>
   <meta name="viewport" content="initial-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -10,13 +10,15 @@
 <body class="body" layout="row" ng-cloak>
 
   <div layout="column" tabIndex="-1" role="main" flex>
-    <md-toolbar class="md-whiteframe-glow-z1 site-content-toolbar">
-      Header
+    <md-toolbar class="">
+      <div class="md-toolbar-tools">
+        メルスト ゲート モンスターピッカー
+      </div>
     </md-toolbar>
 
     <md-content md-scroll-y layout="column" flex>
       <div ng-view layout-padding flex="noshrink">
-        <sample></sample>
+        <monsters></monsters>
       </div>
 
       <div layout="row" flex="noshrink" layout-align="center center"></div>

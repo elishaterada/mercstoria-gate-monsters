@@ -1,0 +1,18 @@
+<md-dialog aria-label="ゲートモンスター">
+  <form ng-cloak>
+
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <ul class="chosen">
+          <li ng-repeat="monster in monsters | filter:{chosen:true}">{{ monster.name }}</li>
+        </ul>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      <md-button ng-click="close()" md-autofocus>
+        閉じる
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

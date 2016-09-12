@@ -1,3 +1,36 @@
 body {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 100%;
   font-size: 14px;
+}
+
+ul {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li::after {
+  content: ", "
+}
+
+ul li:last-child::after {
+  content: ""
+}
+
+.chosen {
+
+}
+
+.md-secondary-container > div {
+  margin-left: 15px;
 }
