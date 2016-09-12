@@ -1,14 +1,12 @@
 function config (
   $mdThemingProvider
 ) {
-
   // Angular Material Setup
   $mdThemingProvider.theme('custom')
     .primaryPalette('deep-purple')
     .accentPalette('blue')
 
   $mdThemingProvider.setDefaultTheme('custom')
-
 }
 
 function run ($rootScope, $window) {
