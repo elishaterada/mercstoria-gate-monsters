@@ -9,10 +9,13 @@
         </md-switch>
 
         <ul>
-          <li ng-repeat="monster in monsters">
-            <span>{{ monster.name }}</span>
-            <span ng-if="options.reach">({{ monster.reach }})</span>
-            <span ng-if="!$last">、</span>
+          <li ng-repeat="monster in monsters track by $index">
+            <span ng-if="monster">
+              <span>{{ monster.name }}</span>
+              <span ng-if="options.reach">({{ monster.reach }})</span>
+            </span>
+            <span ng-if="!monster">不明</span>
+            <span ng-if="!$last">&nbsp;</span>
           </li>
         </ul>
 
