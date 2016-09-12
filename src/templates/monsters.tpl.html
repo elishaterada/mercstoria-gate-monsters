@@ -2,15 +2,16 @@
   ng-model="$ctrl.type"
   placeholder="ゲート属性"
   >
-  <!--<md-option value="fire">炎ゲート</md-option>-->
-  <md-option value="water">水ゲート</md-option>
-  <!--<md-option value="wind">風ゲート</md-option>-->
-  <!--<md-option value="light">光ゲート</md-option>-->
-  <!--<md-option value="dark">闇ゲート</md-option>-->
+  <!--<md-option value="fire">炎属性ゲート</md-option>-->
+  <md-option value="water">水属性ゲート</md-option>
+  <!--<md-option value="wind">風属性ゲート</md-option>-->
+  <!--<md-option value="light">光属性ゲート</md-option>-->
+  <!--<md-option value="dark">闇属性ゲート</md-option>-->
 </md-select>
 
 <md-select
   ng-if="$ctrl.type"
+  ng-change="$ctrl.duplicateCheck(0)"
   ng-model="$ctrl.chosenMonsters[0]"
   placeholder="１体目のモンスター"
 >
@@ -35,6 +36,7 @@
 
 <md-select
   ng-if="$ctrl.type"
+  ng-change="$ctrl.duplicateCheck(1)"
   ng-model="$ctrl.chosenMonsters[1]"
   placeholder="２体目のモンスター"
 >
@@ -59,6 +61,7 @@
 
 <md-select
   ng-if="$ctrl.type"
+  ng-change="$ctrl.duplicateCheck(2)"
   ng-model="$ctrl.chosenMonsters[2]"
   placeholder="３体目のモンスター"
 >
@@ -83,6 +86,7 @@
 
 <md-select
   ng-if="$ctrl.type"
+  ng-change="$ctrl.duplicateCheck(3)"
   ng-model="$ctrl.chosenMonsters[3]"
   placeholder="４体目のモンスター"
 >
@@ -107,6 +111,7 @@
 
 <md-select
   ng-if="$ctrl.type"
+  ng-change="$ctrl.duplicateCheck(4)"
   ng-model="$ctrl.chosenMonsters[4]"
   placeholder="５体目のモンスター"
 >

@@ -54,6 +54,24 @@ function MonstersCtrl ($http, $log, $mdDialog) {
 
   }
 
+  ctrl.duplicateCheck = function(index) {
+    // Find duplicate monster
+    _.forEach(ctrl.chosenMonsters, function(value, key){
+
+      // Skip same index
+      if( key !== index ) {
+
+        // Identify and remove duplicate monster from previous selection
+        if ( value && ctrl.chosenMonsters[index] && value.name === ctrl.chosenMonsters[index].name ) {
+          ctrl.chosenMonsters[key] = null
+          return
+        }
+      }
+
+    })
+
+  }
+
   function getMonsters () {
     $http({
       method: 'GET',
