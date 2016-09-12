@@ -14,12 +14,21 @@
   ng-model="$ctrl.chosenMonsters[0]"
   placeholder="１体目のモンスター"
 >
+  <md-option>未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
-    <div class="monster">
-      <span class="photo type-{{$ctrl.type}}">
-        <img ng-src="src/images/{{monster.name}}.jpg">
-      </span>
-      <span class="name">{{ monster.name }}</span>
+    <div class="monster" layout="row" layout-align="space-between center">
+      <div>
+        <span class="photo type-{{$ctrl.type}}">
+          <img ng-src="src/images/{{monster.name}}.jpg">
+        </span>
+        <span class="name">{{ monster.name }}</span>
+      </div>
+      <div flex></div>
+      <div class="stats-container">
+        <span class="stat combo" ng-if="monster.combo">段{{ monster.combo }}</span>
+        <span class="stat reach" ng-if="monster.reach">リ{{ monster.reach }}</span>
+        <span class="stat range" ng-if="monster.range">範{{ monster.range }}</span>
+      </div>
     </div>
   </md-option>
 </md-select>
@@ -29,12 +38,21 @@
   ng-model="$ctrl.chosenMonsters[1]"
   placeholder="２体目のモンスター"
 >
+  <md-option>未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
-    <div class="monster">
-      <span class="photo type-{{$ctrl.type}}">
-        <img ng-src="src/images/{{monster.name}}.jpg">
-      </span>
-      <span class="name">{{ monster.name }}</span>
+    <div class="monster" layout="row" layout-align="space-between center">
+      <div>
+        <span class="photo type-{{$ctrl.type}}">
+          <img ng-src="src/images/{{monster.name}}.jpg">
+        </span>
+        <span class="name">{{ monster.name }}</span>
+      </div>
+      <div flex></div>
+      <div class="stats-container">
+        <span class="stat combo" ng-if="monster.combo">段{{ monster.combo }}</span>
+        <span class="stat reach" ng-if="monster.reach">リ{{ monster.reach }}</span>
+        <span class="stat range" ng-if="monster.range">範{{ monster.range }}</span>
+      </div>
     </div>
   </md-option>
 </md-select>
@@ -44,12 +62,21 @@
   ng-model="$ctrl.chosenMonsters[2]"
   placeholder="３体目のモンスター"
 >
+  <md-option>未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
-    <div class="monster">
-      <span class="photo type-{{$ctrl.type}}">
-        <img ng-src="src/images/{{monster.name}}.jpg">
-      </span>
-      <span class="name">{{ monster.name }}</span>
+    <div class="monster" layout="row" layout-align="space-between center">
+      <div>
+        <span class="photo type-{{$ctrl.type}}">
+          <img ng-src="src/images/{{monster.name}}.jpg">
+        </span>
+        <span class="name">{{ monster.name }}</span>
+      </div>
+      <div flex></div>
+      <div class="stats-container">
+        <span class="stat combo" ng-if="monster.combo">段{{ monster.combo }}</span>
+        <span class="stat reach" ng-if="monster.reach">リ{{ monster.reach }}</span>
+        <span class="stat range" ng-if="monster.range">範{{ monster.range }}</span>
+      </div>
     </div>
   </md-option>
 </md-select>
@@ -59,12 +86,21 @@
   ng-model="$ctrl.chosenMonsters[3]"
   placeholder="４体目のモンスター"
 >
+  <md-option>未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
-    <div class="monster">
-      <span class="photo type-{{$ctrl.type}}">
-        <img ng-src="src/images/{{monster.name}}.jpg">
-      </span>
-      <span class="name">{{ monster.name }}</span>
+    <div class="monster" layout="row" layout-align="space-between center">
+      <div>
+        <span class="photo type-{{$ctrl.type}}">
+          <img ng-src="src/images/{{monster.name}}.jpg">
+        </span>
+        <span class="name">{{ monster.name }}</span>
+      </div>
+      <div flex></div>
+      <div class="stats-container">
+        <span class="stat combo" ng-if="monster.combo">段{{ monster.combo }}</span>
+        <span class="stat reach" ng-if="monster.reach">リ{{ monster.reach }}</span>
+        <span class="stat range" ng-if="monster.range">範{{ monster.range }}</span>
+      </div>
     </div>
   </md-option>
 </md-select>
@@ -74,12 +110,21 @@
   ng-model="$ctrl.chosenMonsters[4]"
   placeholder="５体目のモンスター"
 >
+  <md-option>未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
-    <div class="monster">
-      <span class="photo type-{{$ctrl.type}}">
-        <img ng-src="src/images/{{monster.name}}.jpg">
-      </span>
-      <span class="name">{{ monster.name }}</span>
+    <div class="monster" layout="row" layout-align="space-between center">
+      <div>
+        <span class="photo type-{{$ctrl.type}}">
+          <img ng-src="src/images/{{monster.name}}.jpg">
+        </span>
+        <span class="name">{{ monster.name }}</span>
+      </div>
+      <div flex></div>
+      <div class="stats-container">
+        <span class="stat combo" ng-if="monster.combo">段{{ monster.combo }}</span>
+        <span class="stat reach" ng-if="monster.reach">リ{{ monster.reach }}</span>
+        <span class="stat range" ng-if="monster.range">範{{ monster.range }}</span>
+      </div>
     </div>
   </md-option>
 </md-select>

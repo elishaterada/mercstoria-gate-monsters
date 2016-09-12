@@ -51,6 +51,7 @@ function MonstersCtrl ($http, $log, $mdDialog) {
     .then(function(answer) {
     }, function() {
     })
+
   }
 
   function getMonsters () {

@@ -32,6 +32,10 @@ md-option {
   padding-bottom: 5px;
 }
 
+md-option .md-text {
+  width: 100%;
+}
+
 /* Monster Select List */
 
 .monster {
@@ -59,6 +63,21 @@ md-option {
 
 .name {
   vertical-align: middle;
+}
+
+.stats-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin: auto 0 auto auto
+}
+
+.stats-container > .stat {
+  margin-left: 5px;
+}
+
+.stats-container > .stat:first-child {
+  margin-left: 0;
 }
 
 .stat.combo {
