@@ -21,31 +21,32 @@ ul li {
   padding: 0;
 }
 
-/* Comma delimited list */
-
-ul.comma-delimited li::after {
-  content: ", "
-}
-
-ul.comma-delimited li:last-child::after {
-  content: ""
-}
-
 /* Angular Material */
 
 .md-secondary-container > div {
   margin-left: 15px;
 }
 
-/* Monster Photos */
+md-option {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Monster Select List */
+
+.monster {
+  padding: 10px 0;
+}
 
 .photo {
   overflow: hidden;
+  display: inline-block;
   margin-right: 15px;
   border-radius: 50%;
   border: 1px solid #ccc;
   width: 45px;
   height: 45px;
+  vertical-align: middle;
 }
 
 .photo img {
@@ -56,7 +57,9 @@ ul.comma-delimited li:last-child::after {
   border-color: #0099FF;
 }
 
-/* Monster Stats */
+.name {
+  vertical-align: middle;
+}
 
 .stat.combo {
   width: 30px;

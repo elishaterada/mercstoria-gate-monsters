@@ -7,141 +7,121 @@
       "name": "メリギール",
       "reach": 90,
       "range": 140,
-      "combo": 3,
-      "chosen": false
+      "combo": 3
     },
     {
       "name": "ヴィンデール",
       "reach": 115,
       "range": 150,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "セネガルガ",
       "reach": 70,
       "range": 140,
-      "combo": 4,
-      "chosen": false
+      "combo": 4
     },
     {
       "name": "アンキロクロス",
       "reach": 40,
       "range": 80,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "ガラパゴシア",
       "reach": 65,
       "range": 130,
-      "combo": 3,
-      "chosen": false
+      "combo": 3
     },
     {
       "name": "フィーラーポポ",
       "reach": 60,
       "range": 140,
-      "combo": 4,
-      "chosen": false
+      "combo": 4
     },
     {
       "name": "オルガウス",
       "reach": 75,
       "range": 145,
-      "combo": 4,
-      "chosen": false
+      "combo": 4
     },
     {
       "name": "ディンプシオン",
       "reach": 90,
       "range": 140,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "モグマグミ",
       "reach": 70,
       "range": 110,
-      "combo": 3,
-      "chosen": false
+      "combo": 3
     },
     {
       "name": "ギロスター",
       "reach": 50,
       "range": 110,
-      "combo": 2,
-      "chosen": false
+      "combo": 2
     },
     {
       "name": "ブリザードドラゴン",
       "reach": 80,
       "range": 120,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "ロングスパイニー",
       "reach": 80,
       "range": 120,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "アウリエル",
       "reach": 35,
       "range": 70,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "ヤミミズク",
       "reach": 45,
       "range": 125,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "メッゾドラニカ",
       "reach": 60,
       "range": 140,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "シックル",
       "reach": 40,
       "range": 60,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "フェンリク",
       "reach": 50,
       "range": 110,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "ワオリオ",
       "reach": 40,
       "range": 60,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "アンデット",
       "reach": 30,
       "range": 45,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     },
     {
       "name": "フィーラー",
       "reach": 60,
       "range": 90,
-      "combo": 0,
-      "chosen": false
+      "combo": 0
     }
   ],
   "wind": [

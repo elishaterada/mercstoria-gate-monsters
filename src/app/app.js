@@ -44,7 +44,7 @@ function MonstersCtrl ($http, $log, $mdDialog) {
       targetEvent: ev,
       clickOutsideToClose: true,
       locals: {
-        monsters: ctrl.monsters[ctrl.type]
+        monsters: ctrl.chosenMonsters
       }
     })
     .then(function(answer) {
@@ -81,6 +81,10 @@ angular
 function MonsterGeneratorCtrl ($scope, $mdDialog, monsters) {
 
   $scope.monsters = monsters
+
+  $scope.options = {
+    reach: false
+  }
 
   $scope.close = function() {
     $mdDialog.cancel()

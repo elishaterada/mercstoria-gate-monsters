@@ -3,9 +3,19 @@
 
     <md-dialog-content>
       <div class="md-dialog-content">
-        <ul class="comma-delimited">
-          <li ng-repeat="monster in monsters | filter:{chosen:true}">{{ monster.name }}</li>
+
+        <md-switch ng-model="options.reach" aria-label="リーチを表示">
+          リーチを表示
+        </md-switch>
+
+        <ul>
+          <li ng-repeat="monster in monsters">
+            <span>{{ monster.name }}</span>
+            <span ng-if="options.reach">({{ monster.reach }})</span>
+            <span ng-if="!$last">、</span>
+          </li>
         </ul>
+
       </div>
     </md-dialog-content>
 

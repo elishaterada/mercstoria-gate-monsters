@@ -2,30 +2,92 @@
   ng-model="$ctrl.type"
   placeholder="ゲート属性"
   >
-  <md-option value="fire">炎ゲート</md-option>
+  <!--<md-option value="fire">炎ゲート</md-option>-->
   <md-option value="water">水ゲート</md-option>
-  <md-option value="wind">風ゲート</md-option>
-  <md-option value="light">光ゲート</md-option>
-  <md-option value="dark">闇ゲート</md-option>
+  <!--<md-option value="wind">風ゲート</md-option>-->
+  <!--<md-option value="light">光ゲート</md-option>-->
+  <!--<md-option value="dark">闇ゲート</md-option>-->
 </md-select>
 
-<md-list ng-if="$ctrl.type">
-  <md-list-item ng-repeat="monster in $ctrl.monsters[$ctrl.type]">
-    <md-checkbox
-      ng-model="monster.chosen"
-      aria-label="{{ monster.name }}を選択"
-    ></md-checkbox>
-    <div class="photo type-{{$ctrl.type}}">
-      <img ng-src="src/images/{{monster.name}}.jpg">
+<md-select
+  ng-if="$ctrl.type"
+  ng-model="$ctrl.chosenMonsters[0]"
+  placeholder="１体目のモンスター"
+>
+  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+    <div class="monster">
+      <span class="photo type-{{$ctrl.type}}">
+        <img ng-src="src/images/{{monster.name}}.jpg">
+      </span>
+      <span class="name">{{ monster.name }}</span>
     </div>
-    <div class="name">{{ monster.name }}</div>
-    <div class="md-secondary stat combo" ng-if="monster.combo">段{{ monster.combo }}</div>
-    <div class="md-secondary stat reach" ng-if="monster.reach">リ{{ monster.reach }}</div>
-    <div class="md-secondary stat range" ng-if="monster.range">範{{ monster.range }}</div>
-  </md-list-item>
-</md-list>
+  </md-option>
+</md-select>
+
+<md-select
+  ng-if="$ctrl.type"
+  ng-model="$ctrl.chosenMonsters[1]"
+  placeholder="２体目のモンスター"
+>
+  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+    <div class="monster">
+      <span class="photo type-{{$ctrl.type}}">
+        <img ng-src="src/images/{{monster.name}}.jpg">
+      </span>
+      <span class="name">{{ monster.name }}</span>
+    </div>
+  </md-option>
+</md-select>
+
+<md-select
+  ng-if="$ctrl.type"
+  ng-model="$ctrl.chosenMonsters[2]"
+  placeholder="３体目のモンスター"
+>
+  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+    <div class="monster">
+      <span class="photo type-{{$ctrl.type}}">
+        <img ng-src="src/images/{{monster.name}}.jpg">
+      </span>
+      <span class="name">{{ monster.name }}</span>
+    </div>
+  </md-option>
+</md-select>
+
+<md-select
+  ng-if="$ctrl.type"
+  ng-model="$ctrl.chosenMonsters[3]"
+  placeholder="４体目のモンスター"
+>
+  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+    <div class="monster">
+      <span class="photo type-{{$ctrl.type}}">
+        <img ng-src="src/images/{{monster.name}}.jpg">
+      </span>
+      <span class="name">{{ monster.name }}</span>
+    </div>
+  </md-option>
+</md-select>
+
+<md-select
+  ng-if="$ctrl.type"
+  ng-model="$ctrl.chosenMonsters[4]"
+  placeholder="５体目のモンスター"
+>
+  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+    <div class="monster">
+      <span class="photo type-{{$ctrl.type}}">
+        <img ng-src="src/images/{{monster.name}}.jpg">
+      </span>
+      <span class="name">{{ monster.name }}</span>
+    </div>
+  </md-option>
+</md-select>
 
 <md-button
+  ng-if="$ctrl.type"
   ng-click="$ctrl.generateMonsterList()"
   class="md-primary md-raised"
-  aria-label="モンスターの一覧を生成">一覧生成</md-button>
+  aria-label="モンスターの一覧を生成">
+  一覧生成
+</md-button>
