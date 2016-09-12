@@ -15,10 +15,13 @@
       ng-model="monster.chosen"
       aria-label="{{ monster.name }}を選択"
     ></md-checkbox>
+    <div class="photo type-{{$ctrl.type}}">
+      <img ng-src="src/images/{{monster.name}}.jpg">
+    </div>
     <div class="name">{{ monster.name }}</div>
-    <div class="md-secondary reach" ng-if="monster.reach">リ{{ monster.reach }}</div>
-    <div class="md-secondary combo" ng-if="monster.range">範{{ monster.range }}</div>
-    <div class="md-secondary combo" ng-if="monster.combo">段{{ monster.combo }}</div>
+    <div class="md-secondary stat combo" ng-if="monster.combo">段{{ monster.combo }}</div>
+    <div class="md-secondary stat reach" ng-if="monster.reach">リ{{ monster.reach }}</div>
+    <div class="md-secondary stat range" ng-if="monster.range">範{{ monster.range }}</div>
   </md-list-item>
 </md-list>
 

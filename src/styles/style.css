@@ -5,6 +5,8 @@ body {
   font-size: 14px;
 }
 
+/* List Default */
+
 ul {
   display: inline;
   list-style: none;
@@ -19,18 +21,51 @@ ul li {
   padding: 0;
 }
 
-ul li::after {
+/* Comma delimited list */
+
+ul.comma-delimited li::after {
   content: ", "
 }
 
-ul li:last-child::after {
+ul.comma-delimited li:last-child::after {
   content: ""
 }
 
-.chosen {
-
-}
+/* Angular Material */
 
 .md-secondary-container > div {
   margin-left: 15px;
+}
+
+/* Monster Photos */
+
+.photo {
+  overflow: hidden;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  width: 45px;
+  height: 45px;
+}
+
+.photo img {
+  max-width: 100%;
+}
+
+.photo.type-water {
+  border-color: #0099FF;
+}
+
+/* Monster Stats */
+
+.stat.combo {
+  width: 30px;
+}
+
+.stat.reach {
+  width: 40px;
+}
+
+.stat.range {
+  width: 40px;
 }
