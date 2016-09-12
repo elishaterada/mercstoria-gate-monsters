@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "eslint src/app/app.js",
-    "dev": "browser-sync start --server --files 'index.html' 'src/**/*.*'",
-    "deploy": "gh-pages -d src"
+    "dev": "browser-sync start --server --files 'index.html' 'src/**/*.*'"
   },
   "repository": {
     "type": "git",
