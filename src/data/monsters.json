@@ -30,8 +30,119 @@
       "range": 80,
       "combo": 0,
       "chosen": false
+    },
+    {
+      "name": "ガラパゴシア",
+      "reach": 65,
+      "range": 130,
+      "combo": 3,
+      "chosen": false
+    },
+    {
+      "name": "フィーラーポポ",
+      "reach": 60,
+      "range": 140,
+      "combo": 4,
+      "chosen": false
+    },
+    {
+      "name": "オルガウス",
+      "reach": 75,
+      "range": 145,
+      "combo": 4,
+      "chosen": false
+    },
+    {
+      "name": "ディンプシオン",
+      "reach": 90,
+      "range": 140,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "モグマグミ",
+      "reach": 70,
+      "range": 110,
+      "combo": 3,
+      "chosen": false
+    },
+    {
+      "name": "ギロスター",
+      "reach": 50,
+      "range": 110,
+      "combo": 2,
+      "chosen": false
+    },
+    {
+      "name": "ブリザードドラゴン",
+      "reach": 80,
+      "range": 120,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "ロングスパイニー",
+      "reach": 80,
+      "range": 120,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "アウリエル",
+      "reach": 35,
+      "range": 70,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "ヤミミズク",
+      "reach": 45,
+      "range": 125,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "メッゾドラニカ",
+      "reach": 60,
+      "range": 140,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "シックル",
+      "reach": 40,
+      "range": 60,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "フェンリク",
+      "reach": 50,
+      "range": 110,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "ワオリオ",
+      "reach": 40,
+      "range": 60,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "アンデット",
+      "reach": 30,
+      "range": 45,
+      "combo": 0,
+      "chosen": false
+    },
+    {
+      "name": "フィーラー",
+      "reach": 60,
+      "range": 90,
+      "combo": 0,
+      "chosen": false
     }
-
   ],
   "wind": [
 
