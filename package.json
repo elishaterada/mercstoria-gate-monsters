@@ -1,0 +1,24 @@
+{
+  "name": "mercstoria-gate-monsters",
+  "version": "0.0.1",
+  "description": "Help users select and paste name of monsters that appear within guild battle gates of Merc Storia",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "browser-sync start --server --files 'index.html' 'src/**/*.*'",
+    "deploy": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elishaterada/mercstoria-gate-monsters.git"
+  },
+  "author": "Elisha Terada",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/elishaterada/mercstoria-gate-monsters/issues"
+  },
+  "homepage": "https://github.com/elishaterada/mercstoria-gate-monsters#readme",
+  "devDependencies": {
+    "browser-sync": "^2.15.0"
+  }
+}
