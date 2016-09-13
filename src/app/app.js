@@ -75,7 +75,7 @@ function MonstersCtrl ($http, $log, $mdDialog) {
   function getMonsters () {
     $http({
       method: 'GET',
-      url: 'src/data/monsters.json'
+      url: 'https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/data/monsters.json'
     }).then(function successCallback(response) {
       ctrl.monsters = response.data
     }, function errorCallback(response) {

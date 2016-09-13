@@ -16,11 +16,11 @@
   placeholder="１体目のモンスター"
 >
   <md-option>未選択・不明</md-option>
-  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+  <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
         <span class="photo type-{{$ctrl.type}}">
-          <img ng-src="src/images/{{monster.name}}.jpg">
+          <img ng-src="https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/images/monsters/{{monster.name}}.jpg">
         </span>
         <span class="name">{{ monster.name }}</span>
       </div>
@@ -41,11 +41,11 @@
   placeholder="２体目のモンスター"
 >
   <md-option>未選択・不明</md-option>
-  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+  <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
         <span class="photo type-{{$ctrl.type}}">
-          <img ng-src="src/images/{{monster.name}}.jpg">
+          <img ng-src="https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/images/monsters/{{monster.name}}.jpg">
         </span>
         <span class="name">{{ monster.name }}</span>
       </div>
@@ -66,11 +66,11 @@
   placeholder="３体目のモンスター"
 >
   <md-option>未選択・不明</md-option>
-  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+  <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
         <span class="photo type-{{$ctrl.type}}">
-          <img ng-src="src/images/{{monster.name}}.jpg">
+          <img ng-src="https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/images/monsters/{{monster.name}}.jpg">
         </span>
         <span class="name">{{ monster.name }}</span>
       </div>
@@ -91,11 +91,11 @@
   placeholder="４体目のモンスター"
 >
   <md-option>未選択・不明</md-option>
-  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+  <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
         <span class="photo type-{{$ctrl.type}}">
-          <img ng-src="src/images/{{monster.name}}.jpg">
+          <img ng-src="https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/images/monsters/{{monster.name}}.jpg">
         </span>
         <span class="name">{{ monster.name }}</span>
       </div>
@@ -116,11 +116,11 @@
   placeholder="５体目のモンスター"
 >
   <md-option>未選択・不明</md-option>
-  <md-option ng-repeat="monster in $ctrl.monsters[$ctrl.type]" ng-value="{{ monster }}">
+  <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
         <span class="photo type-{{$ctrl.type}}">
-          <img ng-src="src/images/{{monster.name}}.jpg">
+          <img ng-src="https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/images/monsters/{{monster.name}}.jpg">
         </span>
         <span class="name">{{ monster.name }}</span>
       </div>
