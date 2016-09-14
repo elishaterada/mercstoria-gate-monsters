@@ -61,8 +61,24 @@ md-option .md-text {
   max-width: 100%;
 }
 
+.photo.type-fire {
+  border-color: #ff2500;
+}
+
 .photo.type-water {
   border-color: #0099FF;
+}
+
+.photo.type-wind {
+  border-color: #4b8f05;
+}
+
+.photo.type-light {
+  border-color: #cdbc0b;
+}
+
+.photo.type-dark {
+  border-color: #6108c7;
 }
 
 .name {
