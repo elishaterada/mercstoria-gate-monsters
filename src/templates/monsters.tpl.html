@@ -2,11 +2,11 @@
   ng-model="$ctrl.type"
   placeholder="ゲート属性"
   >
-  <!--<md-option value="fire">炎属性ゲート</md-option>-->
+  <md-option value="fire">炎属性ゲート</md-option>
   <md-option value="water">水属性ゲート</md-option>
-  <!--<md-option value="wind">風属性ゲート</md-option>-->
-  <!--<md-option value="light">光属性ゲート</md-option>-->
-  <!--<md-option value="dark">闇属性ゲート</md-option>-->
+  <md-option value="wind">風属性ゲート</md-option>
+  <md-option value="light">光属性ゲート</md-option>
+  <md-option value="dark">闇属性ゲート</md-option>
 </md-select>
 
 <md-select
@@ -20,7 +20,7 @@
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
         <span class="photo type-{{$ctrl.type}}">
-          <img ng-src="https://cdn.rawgit.com/elishaterada/mercstoria-db/latest/images/monsters/{{monster.name}}.jpg">
+          <img ng-src="https://rawgit.com/elishaterada/mercstoria-db/master/images/monsters/{{monster.name}}.jpg">
         </span>
         <span class="name">{{ monster.name }}</span>
       </div>
