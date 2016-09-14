@@ -1,5 +1,6 @@
 <md-select
   ng-model="$ctrl.type"
+  ng-change="$ctrl.changeType()"
   placeholder="ゲート属性"
   >
   <md-option value="fire">炎属性ゲート</md-option>
@@ -15,7 +16,7 @@
   ng-model="$ctrl.chosenMonsters[0]"
   placeholder="１体目のモンスター"
 >
-  <md-option>未選択・不明</md-option>
+  <md-option ng-value="">未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
@@ -40,7 +41,7 @@
   ng-model="$ctrl.chosenMonsters[1]"
   placeholder="２体目のモンスター"
 >
-  <md-option>未選択・不明</md-option>
+  <md-option ng-value="">未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
@@ -65,7 +66,7 @@
   ng-model="$ctrl.chosenMonsters[2]"
   placeholder="３体目のモンスター"
 >
-  <md-option>未選択・不明</md-option>
+  <md-option ng-value="">未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
@@ -90,7 +91,7 @@
   ng-model="$ctrl.chosenMonsters[3]"
   placeholder="４体目のモンスター"
 >
-  <md-option>未選択・不明</md-option>
+  <md-option ng-value="">未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>
@@ -115,7 +116,7 @@
   ng-model="$ctrl.chosenMonsters[4]"
   placeholder="５体目のモンスター"
 >
-  <md-option>未選択・不明</md-option>
+  <md-option ng-value="">未選択・不明</md-option>
   <md-option ng-repeat="monster in $ctrl.monsters | filter:{ element:$ctrl.type }" ng-value="{{ monster }}">
     <div class="monster" layout="row" layout-align="space-between center">
       <div>

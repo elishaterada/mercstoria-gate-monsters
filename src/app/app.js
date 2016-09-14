@@ -35,7 +35,7 @@ function MonstersCtrl ($http, $log, $mdDialog) {
   ctrl.monsters = {}
 
   // 5 Total Monsters
-  ctrl.chosenMonsters = _.fill(Array(5), null)
+  ctrl.chosenMonsters = _.fill(Array(5), '')
 
   ctrl.generateMonsterList = function(ev) {
     $mdDialog.show({
@@ -70,6 +70,10 @@ function MonstersCtrl ($http, $log, $mdDialog) {
 
     })
 
+  }
+
+  ctrl.changeType = function() {
+    ctrl.chosenMonsters = _.fill(Array(5), '')
   }
 
   function getMonsters () {
