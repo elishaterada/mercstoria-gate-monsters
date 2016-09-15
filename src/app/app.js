@@ -37,32 +37,31 @@ function MainCtrl ($mdSidenav, $timeout) {
    * Supplies a function that will continue to operate until the
    * time is up.
    */
-  function debounce(func, wait, context) {
-    var timer;
+  function debounce (func, wait, context) {
+    var timer
 
-    return function debounced() {
-      var context = this,
-        args = Array.prototype.slice.call(arguments)
+    return function debounced () {
+      var context = this
+      var args = Array.prototype.slice.call(arguments)
       $timeout.cancel(timer)
-      timer = $timeout(function() {
+      timer = $timeout(function () {
         timer = undefined
         func.apply(context, args)
-      }, wait || 10);
-    };
+      }, wait || 10)
+    }
   }
 
   /**
    * Build handler to open/close a SideNav; when animation finishes
    * report completion in console
    */
-  function buildDelayedToggler(navID) {
-    return debounce(function() {
+  function buildDelayedToggler (navID) {
+    return debounce(function () {
       // Component lookup should always be available since we are not using `ng-if`
       $mdSidenav(navID)
         .toggle()
     }, 200)
   }
-
 }
 
 angular
@@ -83,7 +82,7 @@ function MonstersCtrl ($http, $log, $mdDialog) {
   // 5 Total Monsters
   ctrl.chosenMonsters = _.fill(Array(5), '')
 
-  ctrl.generateMonsterList = function(ev) {
+  ctrl.generateMonsterList = function (ev) {
     $mdDialog.show({
       controller: MonsterGeneratorCtrl,
       templateUrl: 'src/templates/monster-list-generator-dialog.tpl.html',
@@ -94,31 +93,26 @@ function MonstersCtrl ($http, $log, $mdDialog) {
         monsters: ctrl.chosenMonsters
       }
     })
-    .then(function(answer) {
-    }, function() {
+    .then(function (answer) {
+    }, function () {
     })
-
   }
 
-  ctrl.duplicateCheck = function(index) {
+  ctrl.duplicateCheck = function (index) {
     // Find duplicate monster
-    _.forEach(ctrl.chosenMonsters, function(value, key){
-
+    _.forEach(ctrl.chosenMonsters, function (value, key) {
       // Skip same index
-      if( key !== index ) {
-
+      if (key !== index) {
         // Identify and remove duplicate monster from previous selection
-        if ( value && ctrl.chosenMonsters[index] && value.name === ctrl.chosenMonsters[index].name ) {
+        if (value && ctrl.chosenMonsters[index] && value.name === ctrl.chosenMonsters[index].name) {
           ctrl.chosenMonsters[key] = null
           return
         }
       }
-
     })
-
   }
 
-  ctrl.changeType = function() {
+  ctrl.changeType = function () {
     ctrl.chosenMonsters = _.fill(Array(5), '')
   }
 
@@ -126,14 +120,14 @@ function MonstersCtrl ($http, $log, $mdDialog) {
     $http({
       method: 'GET',
       url: 'https://rawgit.com/elishaterada/mercstoria-db/master/data/monsters.json'
-    }).then(function successCallback(response) {
+    }).then(function successCallback (response) {
       ctrl.monsters = response.data
-    }, function errorCallback(response) {
+    }, function errorCallback (response) {
       $log.debug(response)
     })
   }
 
-  function init() {
+  function init () {
     getMonsters()
   }
 
@@ -148,10 +142,25 @@ angular
   })
 
 // Monster Generator Dialog Controller
-function MonsterGeneratorCtrl ($scope, $mdDialog, monsters) {
-
+function MonsterGeneratorCtrl ($scope, $window, $mdToast, $mdDialog, monsters) {
   // Instantiate ClipboardJS
-  new Clipboard('.clipboard')
+  var clipboard = new $window.Clipboard('.clipboard')
+
+  clipboard.on('success', function (e) {
+    $mdToast.show(
+      $mdToast.simple()
+        .textContent('コピーが成功しました')
+        .hideDelay(3000)
+    )
+  })
+
+  clipboard.on('error', function (e) {
+    $mdToast.show(
+      $mdToast.simple()
+      .textContent('コピーに失敗しました')
+      .hideDelay(3000)
+    )
+  })
 
   $scope.options = {
     reach: false
@@ -164,12 +173,11 @@ function MonsterGeneratorCtrl ($scope, $mdDialog, monsters) {
   $scope.generateList = function () {
     $scope.monsters = ''
 
-    _.forEach(monsters, function(value, key){
-
-      if ( value ) {
+    _.forEach(monsters, function (value, key) {
+      if (value) {
         $scope.monsters += value.name
 
-        if ( $scope.options.reach ) {
+        if ($scope.options.reach) {
           $scope.monsters += '(' + value.reach + ')'
         }
       } else {
@@ -177,14 +185,13 @@ function MonsterGeneratorCtrl ($scope, $mdDialog, monsters) {
       }
 
       // Add space after each except the last one
-      if ( key < 4 ) {
+      if (key < 4) {
         $scope.monsters += ' '
       }
-
     })
   }
 
-  function init() {
+  function init () {
     $scope.generateList()
   }
 
