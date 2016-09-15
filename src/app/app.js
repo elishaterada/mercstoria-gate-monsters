@@ -150,13 +150,44 @@ angular
 // Monster Generator Dialog Controller
 function MonsterGeneratorCtrl ($scope, $mdDialog, monsters) {
 
-  $scope.monsters = monsters
+  // Instantiate ClipboardJS
+  new Clipboard('.clipboard')
 
   $scope.options = {
     reach: false
   }
 
-  $scope.close = function() {
+  $scope.close = function () {
     $mdDialog.cancel()
   }
+
+  $scope.generateList = function () {
+    $scope.monsters = ''
+
+    _.forEach(monsters, function(value, key){
+
+      if ( value ) {
+        $scope.monsters += value.name
+
+        if ( $scope.options.reach ) {
+          $scope.monsters += '(' + value.reach + ')'
+        }
+      } else {
+        $scope.monsters += '不明'
+      }
+
+      // Add space after each except the last one
+      if ( key < 4 ) {
+        $scope.monsters += ' '
+      }
+
+    })
+  }
+
+  function init() {
+    $scope.generateList()
+  }
+
+  // Initialize
+  init()
 }

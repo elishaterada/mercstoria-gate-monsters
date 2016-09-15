@@ -4,20 +4,27 @@
     <md-dialog-content>
       <div class="md-dialog-content">
 
-        <md-switch ng-model="options.reach" aria-label="リーチを表示">
+        <md-switch
+          ng-model="options.reach"
+          ng-change="generateList()"
+          aria-label="リーチを表示">
           リーチを表示
         </md-switch>
 
-        <ul>
-          <li ng-repeat="monster in monsters track by $index">
-            <span ng-if="monster">
-              <span>{{ monster.name }}</span>
-              <span ng-if="options.reach">({{ monster.reach }})</span>
-            </span>
-            <span ng-if="!monster">不明</span>
-            <span ng-if="!$last">&nbsp;</span>
-          </li>
-        </ul>
+        <md-input-container class="md-block">
+          <textarea
+            id="generatedList"
+            ng-model="monsters"
+            aria-label="選択したモンスターの一覧"
+            md-select-on-focus
+             ></textarea>
+        </md-input-container>
+
+        <md-button
+          class="md-primary md-raised clipboard md-block"
+          data-clipboard-action="copy"
+          data-clipboard-target="#generatedList"
+        >選択 / コピー</md-button>
 
       </div>
     </md-dialog-content>
