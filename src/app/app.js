@@ -13,6 +13,7 @@ function run ($rootScope, $window) {
   $rootScope._ = $window._
 }
 
+// Top level
 function AppCtrl () {
 }
 
@@ -25,6 +26,51 @@ angular
   .controller('AppCtrl', AppCtrl)
   .config(config)
   .run(run)
+
+// Main Component
+function MainCtrl ($mdSidenav, $timeout) {
+  var ctrl = this
+
+  ctrl.toggleLeftNav = buildDelayedToggler('leftNav')
+
+  /**
+   * Supplies a function that will continue to operate until the
+   * time is up.
+   */
+  function debounce(func, wait, context) {
+    var timer;
+
+    return function debounced() {
+      var context = this,
+        args = Array.prototype.slice.call(arguments)
+      $timeout.cancel(timer)
+      timer = $timeout(function() {
+        timer = undefined
+        func.apply(context, args)
+      }, wait || 10);
+    };
+  }
+
+  /**
+   * Build handler to open/close a SideNav; when animation finishes
+   * report completion in console
+   */
+  function buildDelayedToggler(navID) {
+    return debounce(function() {
+      // Component lookup should always be available since we are not using `ng-if`
+      $mdSidenav(navID)
+        .toggle()
+    }, 200)
+  }
+
+}
+
+angular
+  .module('app')
+  .component('main', {
+    templateUrl: 'src/templates/main.tpl.html',
+    controller: MainCtrl
+  })
 
 //  Monsters Component
 function MonstersCtrl ($http, $log, $mdDialog) {

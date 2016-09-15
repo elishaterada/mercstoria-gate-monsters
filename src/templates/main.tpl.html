@@ -1,0 +1,44 @@
+<md-sidenav
+  class="md-sidenav-left"
+  md-component-id="leftNav"
+  md-whiteframe="4"
+>
+  <md-content>
+    <md-list flex>
+      <md-list-item href="https://twitter.com/solastoria">
+        <img class="md-avatar" src="https://pbs.twimg.com/profile_images/715815315620438017/5uMuHJ5H_400x400.jpg">
+        <div>ソラ (@solastoria)</div>
+      </md-list-item>
+    </md-list>
+
+    <md-divider></md-divider>
+
+    <div layout-padding>
+      <p class="md-body-1">メルストのゲートに出てくるモンスターを順番に選択して、一覧をギルログにコピペ出来るツールです。バグ報告や機能のご要望は<a href="https://twitter.com/solastoria">@solastoria</a>へ！</p>
+      <p class="md-caption">GitHubにてオープンソースの<a href="https://github.com/elishaterada/mercstoria-db">メルストデータベース</a>を作成しています。お時間と興味のある方はデータ入力にご協力ください！</p>
+    </div>
+
+  </md-content>
+</md-sidenav>
+
+<div layout="column" flex>
+  <md-toolbar class="">
+    <div class="md-toolbar-tools">
+      <md-button
+        class="md-icon-button"
+        ng-click="$ctrl.toggleLeftNav()">
+        <md-icon>menu</md-icon>
+      </md-button>
+      <span>メルスト ゲートモンスター</span>
+    </div>
+  </md-toolbar>
+
+  <md-content md-scroll-y layout="column" flex>
+    <div ng-view layout-padding flex="noshrink">
+      <monsters></monsters>
+    </div>
+
+    <div layout="row" flex="noshrink" layout-align="center center"></div>
+  </md-content>
+
+</div>

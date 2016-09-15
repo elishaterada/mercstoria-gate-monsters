@@ -5,6 +5,19 @@ body {
   font-size: 14px;
 }
 
+/* Link Default */
+a {
+  color: rgb(16,108,200);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:focus {
+  color: rgb(16,108,200);
+  text-decoration: none;
+}
+
 /* List Default */
 
 ul {
