@@ -13,6 +13,7 @@
 
         <md-input-container class="md-block">
           <textarea
+            md-autofocus
             id="generatedList"
             ng-model="monsters"
             aria-label="選択したモンスターの一覧"></textarea>
@@ -28,7 +29,7 @@
     </md-dialog-content>
 
     <md-dialog-actions layout="row">
-      <md-button ng-click="close()" md-autofocus>
+      <md-button ng-click="close()">
         閉じる
       </md-button>
     </md-dialog-actions>
