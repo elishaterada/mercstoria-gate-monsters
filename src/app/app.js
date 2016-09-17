@@ -163,7 +163,8 @@ function MonsterGeneratorCtrl ($scope, $window, $mdToast, $mdDialog, monsters) {
   })
 
   $scope.options = {
-    reach: false
+    reach: false,
+    range: false
   }
 
   $scope.close = function () {
@@ -176,9 +177,18 @@ function MonsterGeneratorCtrl ($scope, $window, $mdToast, $mdDialog, monsters) {
     _.forEach(monsters, function (value, key) {
       if (value) {
         $scope.monsters += value.name
+        $scope.optionValue = ''
 
         if ($scope.options.reach) {
-          $scope.monsters += '(' + value.reach + ')'
+          $scope.optionValue += 'リ' + value.reach
+        }
+
+        if ($scope.options.range) {
+          $scope.optionValue += '範' + value.range
+        }
+
+        if ($scope.optionValue !== '') {
+          $scope.monsters += '(' + $scope.optionValue + ')'
         }
       } else {
         $scope.monsters += '不明'

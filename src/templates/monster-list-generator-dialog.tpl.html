@@ -11,6 +11,13 @@
           リーチを表示
         </md-switch>
 
+        <md-switch
+          ng-model="options.range"
+          ng-change="generateList()"
+          aria-label="範囲を表示">
+          範囲を表示
+        </md-switch>
+
         <md-input-container class="md-block">
           <textarea
             md-autofocus
